@@ -79,10 +79,12 @@ function createTask(title, description) {
 }
 
 
+
 // DRIVER CODE BELOW:
 const task1 = createTask("Clean Cat Litter", "Take all the 💩 out of the litter box!");
 const task2 = createTask("Do Laundry", "😨");
 const tasks = [task1, task2];
+
 
 
 // TEST CODE:
@@ -94,4 +96,3 @@ task1.logState();
 task1.markCompleted();
 // Clean Cat Litter has been completed.
 task1.logState();
-
