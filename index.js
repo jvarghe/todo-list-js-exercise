@@ -46,3 +46,52 @@ logTaskState(0); // Clean Cat Litter has been completed
 */
 
 
+// TODO LIST APP WRITTEN IN OOP STYLE:
+
+// Calling this function instantiates a new Task object.
+function createTask(title, description) {
+
+  // Initialize a new Task object and fill in its details:
+  const task = {
+
+    // PROPERTIES:
+    title: title,
+    description: description,
+    complete: false,
+
+
+    // METHODS:
+    logState: function() {
+
+      console.log(`${this.title} has${this.complete ? " " : " not"} been completed.`);
+
+    },
+
+
+    markCompleted: function() {
+      this.complete = true;
+    }
+
+  };
+
+
+  return task;
+}
+
+
+// DRIVER CODE BELOW:
+const task1 = createTask("Clean Cat Litter", "Take all the 💩 out of the litter box!");
+const task2 = createTask("Do Laundry", "😨");
+const tasks = [task1, task2];
+
+
+// TEST CODE:
+// console.log(tasks);
+
+// Clean Cat Litter has not been completed.
+task1.logState();
+
+task1.markCompleted();
+// Clean Cat Litter has been completed.
+task1.logState();
+
